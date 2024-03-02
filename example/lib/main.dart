@@ -2,7 +2,6 @@ import 'package:contact_add/contact.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:flutter/services.dart';
 import 'package:contact_add/contact_add.dart';
 
 void main() {
@@ -17,7 +16,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,9 +26,11 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: Column(
             children: [
-              ElevatedButton(onPressed: () async {
-                await addContact();
-              }, child: Text('Add Contact')),
+              ElevatedButton(
+                  onPressed: () async {
+                    await addContact();
+                  },
+                  child: const Text('Add Contact')),
             ],
           ),
         ),
@@ -40,11 +40,10 @@ class _MyAppState extends State<MyApp> {
 
   Future<void> addContact() async {
     await ContactAdd.addContact(Contact(
-      firstname: "John",
-      lastname: "Doe",
-      company: "ContactAdd",
-      phone: "+41 01 234 56 78",
-      email: "hello@example.com"
-    ));
+        firstname: "John",
+        lastname: "Doe",
+        company: "ContactAdd",
+        phone: "+41 01 234 56 78",
+        email: "hello@example.com"));
   }
 }

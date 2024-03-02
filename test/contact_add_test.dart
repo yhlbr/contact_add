@@ -8,7 +8,6 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 class MockContactAddPlatform
     with MockPlatformInterfaceMixin
     implements ContactAddPlatform {
-
   @override
   Future<bool> addContact(Contact contact) => Future.value(true);
 }
@@ -24,12 +23,13 @@ void main() {
     MockContactAddPlatform fakePlatform = MockContactAddPlatform();
     ContactAddPlatform.instance = fakePlatform;
 
-    expect(await ContactAdd.addContact(Contact(
-        firstname: "John",
-        lastname: "Doe",
-        company: "ContactAdd",
-        phone: "+41 01 234 56 78",
-        email: "hello@example.com"
-    )), true);
+    expect(
+        await ContactAdd.addContact(Contact(
+            firstname: "John",
+            lastname: "Doe",
+            company: "ContactAdd",
+            phone: "+41 01 234 56 78",
+            email: "hello@example.com")),
+        true);
   });
 }

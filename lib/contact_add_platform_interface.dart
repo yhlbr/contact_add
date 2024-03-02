@@ -3,6 +3,7 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 import 'contact.dart';
 import 'contact_add_method_channel.dart';
 
+/// Platform for internally handing the invocation of native code
 abstract class ContactAddPlatform extends PlatformInterface {
   /// Constructs a ContactAddPlatform.
   ContactAddPlatform() : super(token: _token);
@@ -24,6 +25,7 @@ abstract class ContactAddPlatform extends PlatformInterface {
     _instance = instance;
   }
 
+  /// Abstract method overwritten in [MethodChannelContactAdd.addContact]
   Future<bool> addContact(Contact contact) {
     throw UnimplementedError('addContact() has not been implemented.');
   }

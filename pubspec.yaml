@@ -1,6 +1,6 @@
 name: contact_add
-description: "Add contacts to the OS without additional permissions!"
-version: 0.0.1
+description: "Add contacts to Android, iOS or macOS without additional permissions. This is done using native views for the user to complete the contact and save it to the address book."
+version: 0.0.2
 homepage: "https://github.com/yhlbr/contact_add"
 
 environment:

@@ -10,7 +10,8 @@ void main() {
   const MethodChannel channel = MethodChannel('contact_add');
 
   setUp(() {
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(
       channel,
       (MethodCall methodCall) async {
         return true;
@@ -19,16 +20,18 @@ void main() {
   });
 
   tearDown(() {
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel, null);
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(channel, null);
   });
 
   test('addContact', () async {
-    expect(await platform.addContact(Contact(
-        firstname: "John",
-        lastname: "Doe",
-        company: "ContactAdd",
-        phone: "+41 01 234 56 78",
-        email: "hello@example.com"
-    )), true);
+    expect(
+        await platform.addContact(Contact(
+            firstname: "John",
+            lastname: "Doe",
+            company: "ContactAdd",
+            phone: "+41 01 234 56 78",
+            email: "hello@example.com")),
+        true);
   });
 }

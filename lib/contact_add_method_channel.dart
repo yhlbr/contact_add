@@ -12,6 +12,8 @@ class MethodChannelContactAdd extends ContactAddPlatform {
 
   @override
   Future<bool> addContact(Contact contact) async {
-    return await methodChannel.invokeMethod<bool>('addContact', {'contact': contact.toMap()}) ?? false;
+    return await methodChannel
+            .invokeMethod<bool>('addContact', {'contact': contact.toMap()}) ??
+        false;
   }
 }
