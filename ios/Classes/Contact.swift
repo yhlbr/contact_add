@@ -4,7 +4,7 @@ import Flutter
 
 public class Contact: NSObject {
 
-    public static func fromData(data: [String:String]) -> CNMutableContact {
+    public static func fromData(data: [String:String?]) -> CNMutableContact {
         let contact = CNMutableContact()
         if let firstname = data["firstname"] as? String {
             contact.givenName = firstname

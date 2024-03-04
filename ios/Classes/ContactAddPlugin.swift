@@ -23,7 +23,7 @@ public class ContactAddPlugin: NSObject, FlutterPlugin {
         guard let arguments = arguments as? [String: Any] else {
             return false
         }
-        guard let contact = arguments["contact"] as? [String: String] else {
+        guard let contact = arguments["contact"] as? [String: String?] else {
             return false
         }
         let mutableContact = Contact.fromData(data: contact);

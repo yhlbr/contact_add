@@ -4,14 +4,14 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'contact_add'
-  s.version          = '0.0.1'
-  s.summary          = 'A new Flutter plugin project.'
+  s.version          = '0.0.3'
+  s.summary          = 'Add contacts to Android, iOS or macOS without additional permissions.'
   s.description      = <<-DESC
-A new Flutter plugin project.
+Add contacts to Android, iOS or macOS without additional permissions. This is done using native views for the user to complete the contact and save it to the address book.
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'https://github.com/yhlbr/contact_add'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'Yannick Hilber' => 'email@example.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'

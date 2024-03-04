@@ -7,3 +7,7 @@
 
 * Improved Example Project
 * Cleaned up documentation
+
+## 0.0.3
+
+* Fixed adding contact with some fields missing on iOS
